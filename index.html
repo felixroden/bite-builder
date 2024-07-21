@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="BiteBuilder: Simplifying meal planning with customized caloric-based meal plans."
+    >
+    <title>Home - BiteBuilder</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script type="module" src="assets/js/index.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <a href="index.html" id="pageTitle">
+          <h1>BiteBuilder</h1>
+        </a>
+        <p>As easy as pie!</p>
+      </header>
+
+      <nav>
+        <ul id="menu">
+          <li id="active"><a href="index.html">Home</a></li>
+          <li><a href="html/howitworks.html">How it works</a></li>
+          <li><a href="html/about.html">About</a></li>
+          <li><a href="html/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main id="mealPlanView"></main>
+
+      <aside id="sidebar">
+        <section id="settings">
+          <header>
+            <h2>Settings</h2>
+          </header>
+
+          <label for="caloriesInput" class="settingsLabel"
+            >Caloric target:</label
+          >
+          <input
+            type="number"
+            min="0"
+            id="caloriesInput"
+            name="input-calories"
+            placeholder="kcal"
+          >
+
+          <button id="buildButton">Build</button>
+        </section>
+        <section id="nutritionGuide">
+          <header id="nutritionGuideHeader">
+            <h2>Recommended daily calorie intake</h2>
+          </header>
+          <table class="nutritionGuideTable">
+            <caption>
+              Women
+            </caption>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Low</th>
+                <th>Medium</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18-24</td>
+                <td>2000</td>
+                <td>2200</td>
+                <td>2500</td>
+              </tr>
+              <tr>
+                <td>25-50</td>
+                <td>1900</td>
+                <td>2200</td>
+                <td>2400</td>
+              </tr>
+              <tr>
+                <td>51-70</td>
+                <td>1700</td>
+                <td>2000</td>
+                <td>2200</td>
+              </tr>
+              <tr>
+                <td>&gt;70</td>
+                <td>1700</td>
+                <td>2000</td>
+                <td>2200</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nutritionGuideTable">
+            <caption>
+              Men
+            </caption>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Low</th>
+                <th>Medium</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18-24</td>
+                <td>2500</td>
+                <td>2800</td>
+                <td>3200</td>
+              </tr>
+              <tr>
+                <td>25-50</td>
+                <td>2400</td>
+                <td>2700</td>
+                <td>3000</td>
+              </tr>
+              <tr>
+                <td>51-70</td>
+                <td>2200</td>
+                <td>2500</td>
+                <td>2800</td>
+              </tr>
+              <tr>
+                <td>&gt;70</td>
+                <td>2100</td>
+                <td>2400</td>
+                <td>2700</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="nutritionGuideSource">
+            (Source:
+            <a
+              href="https://www.livsmedelsverket.se/livsmedel-och-innehall/naringsamne/energi-kalorier"
+              >Livsmedelsverket</a
+            >)
+          </p>
+        </section>
+      </aside>
+      <footer id="footer">
+        <p id="copyright">
+          &copy; <span id="copyrightYear"></span> Felix Rödén
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Learn more about BiteBuilder."
+    >
+    <title>About - BiteBuilder</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <script type="module" src="../assets/js/index.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <a href="index.html" id="pageTitle">
+          <h1>BiteBuilder</h1>
+        </a>
+        <p>As easy as pie!</p>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="howitworks.html">How it works</a></li>
+          <li id="active"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main class="mainArticle articleFormat">
+        <article>
+          <header>
+            <h2>About</h2>
+          </header>
+          <p>
+            BiteBuilder is your go-to solution for effortless meal planning.
+          </p>
+          <p>
+            Our goal is to simplify your daily meal preparation by providing
+            customized meal plans based on your caloric needs. Whether you're
+            new to calorie counting or just looking for a convenient way to
+            manage your diet, BiteBuilder is here to help.
+          </p>
+          <br>
+          <section id="mission">
+            <h3>Our Mission</h3>
+            <p>
+              BiteBuilder aims to make daily meal planning hassle-free by
+              generating three balanced meals—breakfast, lunch, and dinner—based
+              on your daily caloric limit. We strive to save you time and effort
+              while helping you maintain a healthy diet.
+            </p>
+          </section>
+          <br>
+          <section id="users">
+            <h3>Meet Our Users</h3>
+            <div class="userProfile">
+              <picture class="userPicture">
+                <source
+                  media="(min-width:838px)"
+                  srcset="../assets/images/user-male-large.webp"
+                >
+                <source
+                  media="(min-width:615px)"
+                  srcset="../assets/images/user-male-medium.webp"
+                >
+                <img
+                  src="../assets/images/user-male-small.webp"
+                  alt="User Anders standing with his arms crossed"
+                >
+              </picture>
+              <p class="userInfo">
+                Anders, 40<br>Transitioned from a physically demanding job to
+                a sedentary one. He needs help understanding his caloric needs
+                as he notices gradual weight gain.
+              </p>
+            </div>
+            <div class="userProfile">
+              <picture class="userPicture">
+                <source
+                  media="(min-width:838px)"
+                  srcset="../assets/images/user-female-large.webp"
+                >
+                <source
+                  media="(min-width:615px)"
+                  srcset="../assets/images/user-female-medium.webp"
+                >
+                <img
+                  src="../assets/images/user-female-small.webp"
+                  alt="User Lisa sitting inside a vehicle"
+                >
+              </picture>
+              <p class="userInfo">
+                Lisa, 34<br>Has a packed schedule from Monday to Sunday and is
+                tired of her usual go-to meals. She seeks quick, inspiring
+                recipes without worrying about their nutritional content.
+              </p>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <aside id="sidebar">
+        <section id="settings">
+          <header>
+            <h2>Settings</h2>
+          </header>
+          <label for="caloriesInput" class="settingsLabel hoverIndicator"
+            >Caloric target:</label
+          >
+          <input
+            type="number"
+            min="0"
+            id="caloriesInput"
+            name="input-calories"
+            placeholder="kcal"
+          >
+          <button id="buildButton" class="hoverIndicator">Build</button>
+        </section>
+        <section id="nutritionGuide">
+          <header id="nutritionGuideHeader">
+            <h2>Recommended daily calorie intake</h2>
+          </header>
+          <table class="nutritionGuideTable">
+            <caption>
+              Women
+            </caption>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Low</th>
+                <th>Medium</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18-24</td>
+                <td>2000</td>
+                <td>2200</td>
+                <td>2500</td>
+              </tr>
+              <tr>
+                <td>25-50</td>
+                <td>1900</td>
+                <td>2200</td>
+                <td>2400</td>
+              </tr>
+              <tr>
+                <td>51-70</td>
+                <td>1700</td>
+                <td>2000</td>
+                <td>2200</td>
+              </tr>
+              <tr>
+                <td>&gt;70</td>
+                <td>1700</td>
+                <td>2000</td>
+                <td>2200</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="nutritionGuideTable">
+            <caption>
+              Men
+            </caption>
+            <thead>
+              <tr>
+                <th>Age</th>
+                <th>Low</th>
+                <th>Medium</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18-24</td>
+                <td>2500</td>
+                <td>2800</td>
+                <td>3200</td>
+              </tr>
+              <tr>
+                <td>25-50</td>
+                <td>2400</td>
+                <td>2700</td>
+                <td>3000</td>
+              </tr>
+              <tr>
+                <td>51-70</td>
+                <td>2200</td>
+                <td>2500</td>
+                <td>2800</td>
+              </tr>
+              <tr>
+                <td>&gt;70</td>
+                <td>2100</td>
+                <td>2400</td>
+                <td>2700</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="nutritionGuideSource">
+            (Source:
+            <a
+              href="https://www.livsmedelsverket.se/livsmedel-och-innehall/naringsamne/energi-kalorier"
+              >Livsmedelsverket</a
+            >)
+          </p>
+        </section>
+      </aside>
+      <footer id="footer">
+        <p id="copyright">
+          &copy; <span id="copyrightYear"></span> Felix Rödén
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

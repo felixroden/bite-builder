@@ -1,0 +1,677 @@
+/* Fonts */
+@font-face {
+  font-family: Open-Sans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+/* Body*/
+body {
+  font: 1rem Open-Sans, sans-serif;
+  background-color: #bcd8bc;
+  padding: 1.5rem;
+}
+
+/* Container*/
+#container {
+  min-height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "content content sidebar"
+    "footer footer footer";
+  grid-template-rows: max-content max-content auto max-content;
+}
+
+/* Header */
+header {
+  grid-area: header;
+  margin: 0 auto;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#pageTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Navigation */
+nav {
+  grid-area: nav;
+  margin-top: 1rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav li a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+nav li:hover a {
+  border-bottom: 2px solid #000;
+}
+
+#active {
+  border-bottom: 2px solid #000;
+}
+
+/* Main content */
+main {
+  grid-area: content;
+  margin-right: 1.5rem;
+}
+
+.helperMessage {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 50%;
+  font-style: italic;
+}
+
+/* Sidebar */
+aside#sidebar {
+  grid-area: sidebar;
+  margin-top: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffff;
+  border-radius: 10px;
+}
+
+aside h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+#settings {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #0000002d;
+}
+
+#settings input {
+  padding: 0.3rem;
+  width: 6rem;
+  font-size: 1.1rem;
+  border: 1px solid #c5c8c3;
+  border-radius: 5px;
+}
+
+#settings input:hover {
+  border-color: #000;
+}
+
+.settingsLabel {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#buildButton {
+  padding: 0.3rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #fff;
+  font-size: 1.1rem;
+  border: 1px solid #c5c8c3;
+  border-radius: 6px;
+}
+
+#buildButton:hover,
+#buildButton:focus,
+#menuButton:hover,
+#menuButton:focus {
+  border-color: #000;
+}
+
+#buildButton:active {
+  box-shadow: none;
+  background-color: #f1f1f1;
+}
+
+/* Nutrition guide */
+#nutritionGuide {
+  padding-top: 2rem;
+}
+
+#nutritionGuide h2 {
+  margin-bottom: 2rem;
+}
+
+.nutritionGuideTable {
+  margin: 0 auto 2rem auto;
+}
+
+.nutritionGuideTable caption {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.nutritionGuideTable th {
+  border-bottom: 2px solid #000;
+}
+
+.nutritionGuideTable td {
+  border-bottom: 1px solid #000;
+  padding: 0.6rem 1rem;
+}
+
+#nutritionGuideSource {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Recipe link container */
+.recipeLinkContainer {
+  clear: both;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1.4rem;
+}
+
+/* Meal card*/
+.mealCard {
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.mealTypeHeader {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  text-transform: capitalize;
+}
+
+.mealTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.mealCard picture {
+  display: inline-block;
+  width: auto;
+}
+
+.mealImage {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 312px;
+  min-width: 220px;
+  height: auto;
+}
+
+.mealInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1%;
+  grid-template-areas: "TitleImage table";
+}
+
+.mealTitleImage {
+  grid-area: TitleImage;
+  width: fit-content;
+}
+
+.mealCard picture {
+  grid-area: picture;
+}
+
+/* Nutrition table*/
+.nutritionTableMealCard {
+  grid-area: table;
+  min-width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nutritionTableMealCard caption {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.nutritionTableMealCard th {
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.nutritionTableMealCard td {
+  padding: 0.8rem;
+  text-transform: capitalize;
+}
+
+.nutritionTableMealCard tbody tr:nth-child(odd) {
+  background-color: rgba(220, 220, 220, 0.25);
+}
+/* .nutritionTableMealCard thead {
+  background-color: #fff;
+} */
+
+/* .nutritionTableMealCard tr:first-child {
+  background-color: #fff;
+} */
+
+/* Recipe link */
+.recipeLink {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.3rem 1rem;
+  color: #000;
+}
+
+.recipeLink:hover {
+  border-bottom: 2px solid #000;
+}
+
+#totalCaloriesText {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Main article*/
+.mainArticle {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.mainArticle h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.mainArticle p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Recipe view */
+#recipeView h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.instructionStep {
+  list-style-type: decimal;
+  margin: 1rem 1rem;
+}
+
+.recipeImage {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 636px;
+  height: auto;
+}
+
+#recipeView h3 {
+  font-weight: bold;
+}
+
+/* Ingredients list */
+#ingredientsList {
+  list-style: disc inside;
+}
+
+#ingredientsList li {
+  padding: 0.5rem;
+}
+
+#ingredientsList li:first-letter {
+  text-transform: uppercase;
+}
+
+/* Footer */
+#footer {
+  grid-area: footer;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Copyright */
+#copyright {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+/* Article format */
+.articleFormat h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.articleFormat img {
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/* Bold text */
+.boldTextSpan {
+  font-weight: bold;
+}
+
+/* Background */
+.background {
+  background: #fff url("/assets/images/logo-gray.webp") center 46rem/220px 220px
+    no-repeat;
+}
+
+/* Description list */
+.descriptionList {
+  list-style: decimal inside;
+}
+
+.descriptionList li {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.descriptionList strong {
+  font-weight: bold;
+}
+
+/* User profile */
+.userProfile {
+  overflow: hidden;
+}
+
+.userPicture {
+  float: left;
+  margin-right: 2rem;
+}
+
+.userInfo {
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+/* Contact form */
+#contactForm {
+  margin-top: 2rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 60%;
+  max-width: 40%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+#contactForm label {
+  padding: 0.5rem;
+  display: inline-block;
+  width: 16%;
+  margin: 1rem 0 0 10%;
+}
+
+#contactForm label,
+#contactForm input,
+#contactForm textarea {
+  font-size: 1.2rem;
+}
+
+#contactForm label[for="message"] {
+  float: left;
+  margin-right: 4px;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  margin: 1rem 0;
+}
+
+#contactForm input[type="submit"] {
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 30%;
+  clear: both;
+}
+
+#contactForm input[type="submit"]:hover,
+#contactForm input:hover,
+#contactForm textarea:hover {
+  border-color: #000;
+}
+
+/* Media Queries */
+@media (max-height: 1220px) {
+  .background {
+    background-image: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .background {
+    background-image: none;
+  }
+}
+
+@media (max-width: 1096px) {
+  #container {
+    min-height: 100vh;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "sidebar sidebar sidebar"
+      "content content content"
+      "footer footer footer";
+    /* grid-template-rows: repeat(4, max-content); */
+    grid-template-rows: max-content max-content max-content 1fr max-content;
+  }
+
+  main {
+    margin-right: 0;
+  }
+
+  .mealInfo {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 1%;
+    grid-template-areas: "TitleImage table";
+  }
+
+  #sidebar {
+    height: fit-content;
+  }
+
+  .mealImage {
+    max-width: 312px;
+  }
+
+  #nutritionGuide {
+    display: none;
+  }
+
+  #settings {
+    border: none;
+  }
+
+  #buildButton {
+    width: 5rem;
+  }
+
+  #settings {
+    padding: 0.5rem;
+  }
+
+  #settings input {
+    margin-bottom: 0.5rem;
+  }
+
+  #settings h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  #settings label {
+    display: inline;
+  }
+
+  #nutritionGuide h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 910px) {
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contactForm label[for="message"] {
+    margin: 0 auto;
+  }
+
+  #contactForm {
+    text-align: center;
+  }
+
+  #contactForm label {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  #contactForm textarea {
+    margin-top: 0;
+  }
+
+  #contactForm input[type="submit"] {
+    margin-left: 0;
+  }
+
+  #contactForm input {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 683px) {
+  .userPicture {
+    float: none;
+    display: block;
+  }
+
+  .userProfile p {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .mealInfo {
+    grid-template-columns: 1fr;
+    gap: 1%;
+    grid-template-areas:
+      "TitleImage"
+      "table";
+  }
+
+  .mealTitleImage {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  #contactForm input,
+  #contactForm textarea {
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  #pageTitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  #pageTitle {
+    font-size: 3rem;
+  }
+
+  #menuButton {
+    display: block;
+  }
+}
+
+@media (max-width: 390px) {
+  #pageTitle {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 384px) {
+  #settings label {
+    display: block;
+  }
+}
+
+@media (max-width: 340px) {
+  #pageTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 330px) {
+  #totalCaloriesText span {
+    display: block;
+  }
+}
