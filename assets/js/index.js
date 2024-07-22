@@ -94,7 +94,7 @@ MEAL_PLAN_BUTTON.addEventListener("click", () => {
     localStorage.setItem("targetCalories", targetCalories);
     // SOURCE: https://www.w3schools.com/jsref/jsref_endswith.asp
     if (!isHomePage()) {
-      window.location.href = "/index.html";
+      window.location.href = "/bite-builder/index.html";
     } else {
       showMeals();
     }
