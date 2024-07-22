@@ -8,7 +8,7 @@ import { Recipe } from "./recipe.js";
 
 let mealPlan;
 let targetCalories;
-const PATH_TO_RECIPE = "/html/recipe.html";
+const PATH_TO_RECIPE = "/bite-builder/html/recipe.html";
 const IMAGE_SIZES = [
   "90x90",
   "240x150",
