@@ -49,7 +49,7 @@ function loadMealPlanFromStorage() {
 
 function isHomePage() {
   const url = window.location.href;
-  return url.endsWith("/") || url.endsWith("index.html");
+  return url.endsWith("bite-builder/") || url.endsWith("index.html");
 }
 
 function handleHomePage() {
